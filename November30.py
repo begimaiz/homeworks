@@ -31,22 +31,22 @@ class Solution(object):
             resultt += i
         return resultt
 
+def print_answers():
+    print()
+    inp1 = ["alice and bob love leetcode","i think so too","this is great thanks very much"]
+    print('mostWordsFound:')
+    print('input: ', inp1)
+    print('result: ', Solution().mostWordsFound(inp1))
+    print()
 
-print()
-inp1 = ["alice and bob love leetcode","i think so too","this is great thanks very much"]
-print('mostWordsFound:')
-print('input: ', inp1)
-print('result: ', Solution().mostWordsFound(inp1))
-print()
+    inp2 = ["--X","X++","X++"]
+    print('finalValueAfterOperations:')
+    print('input: ', inp2)
+    print('result: ', Solution().finalValueAfterOperations(inp2))
+    print()
 
-inp2 = ["--X","X++","X++"]
-print('finalValueAfterOperations:')
-print('input: ', inp2)
-print('result: ', Solution().finalValueAfterOperations(inp2))
-print()
-
-inp3 = [4,5,6,7,0,2,1,3]
-print('restoreString:')
-print('input: ', "codeleet", inp3)
-print('result: ', Solution().restoreString("codeleet", inp3))
-print()
+    inp3 = [4,5,6,7,0,2,1,3]
+    print('restoreString:')
+    print('input: ', "codeleet", inp3)
+    print('result: ', Solution().restoreString("codeleet", inp3))
+    print()
