@@ -1,5 +1,6 @@
 class Animal:
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
         self.extinct = False
         self.weight = 0
         self.colours = []
@@ -18,8 +19,8 @@ class Animal:
 
 
 class Vertebrate(Animal):
-    def __init__(self, number_of_vertebrates):
-        super().__init__()
+    def __init__(self, name,  number_of_vertebrates):
+        super().__init__(name)
         self.number_of_vertebrates = number_of_vertebrates
 
     def set_number_of_vertebrates(self, number_of_vertebrates):
@@ -34,10 +35,9 @@ class Invertebrate(Animal):
 
 
 class Mammal (Vertebrate):
-    def __init__(self, name):
-        super().__init__(self)
-        self.number_of_nipples = 0
-        self.name = name
+    def __init__(self, name,  number_of_vertebrates, number_of_nipples):
+        super().__init__(name,  number_of_vertebrates)
+        self.number_of_nipples = number_of_nipples
 
     def set_number_of_nipples(self, number_of_nipples):
         self.number_of_nipples = number_of_nipples
@@ -47,7 +47,7 @@ class Mammal (Vertebrate):
 
 
 def create_animal():
-    Mammal1 = Mammal('Cat')
+    Mammal1 = Mammal('Cat', 42, 2)
     Mammal1.set_weight(52)
     Mammal1.set_number_of_nipples(8)
     Mammal1.set_colours(['white', 'black'])
