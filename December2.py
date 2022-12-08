@@ -35,7 +35,7 @@ class Invertebrate(Animal):
 
 
 class Mammal (Vertebrate):
-    def __init__(self, name,  number_of_vertebrates, number_of_nipples):
+    def __init__(self, name,  number_of_vertebrates=None, number_of_nipples=None):
         super().__init__(name,  number_of_vertebrates)
         self.number_of_nipples = number_of_nipples
 
@@ -53,4 +53,6 @@ def create_animal():
     Mammal1.set_colours(['white', 'black'])
     Mammal1.set_extinct(False)
     Mammal1.set_number_of_vertebrates(30)
+    Mamal2 = Mammal('dog')
     print(Mammal1.get_characteristics())
+    print(Mamal2.get_characteristics())
